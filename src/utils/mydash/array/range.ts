@@ -18,20 +18,20 @@ rangeRight(1, 4, 0); // => [1, 1, 1]
 rangeRight(0); // => []
 */
 
-export function rangeRight(start, end, step) {
+export function rangeRight(start?: number, end?: number, step?: number): Array<number> {
     return range(start, end, step, true);
 }
 
-export function range(start, end, step, isRight) {
-    let a = start;
-    let b = end;
-    let k = step;
+export function range(start?: number, end?: number, step?: number, isRight: boolean = false): Array<number> {
+    let a = start ?? 0;
+    let b = end ?? 0;
+    let k = step ?? 0;
 
     if (arguments.length === 0) {
         return [];
     }
 
-    if (!end) {
+    if (start && !end) {
         b = start;
         a = 0;
         k = b >= 0 ? 1 : -1;
@@ -39,7 +39,7 @@ export function range(start, end, step, isRight) {
         k = b >= 0 ? 1 : -1;
     }
 
-    const result = [];
+    const result: Array<number> = [];
 
     if (k === 0) {
         const length = Math.abs(a - b);

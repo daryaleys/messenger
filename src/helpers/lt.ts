@@ -1,1 +1,1 @@
-export default (a, b) => Number(a) < Number(b);
+export default (a: number | string, b: number | string) => Number(a) < Number(b);

@@ -13,7 +13,7 @@ isEmpty(new Map([['1', 'str1'], [1, 'num1'], [true, 'bool1']])) // => false
 isEmpty(new Set(['value1', 'value2', 'value3'])) // => false
 */
 
-export function isEmpty(value) {
+export function isEmpty(value: unknown): boolean {
     // null и undefined
     if (value == null) return true;
 
