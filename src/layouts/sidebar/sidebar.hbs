@@ -1,4 +1,9 @@
 <aside class="sidebar">
+  <button class="theme-toggle" type="button" aria-label="Переключить тему" data-theme-toggle>
+    <span class="theme-toggle__icon" aria-hidden="true"></span>
+    <span class="theme-toggle__label" data-theme-toggle-label>Темная тема</span>
+  </button>
+
   <nav class="chat-list">
     {{#each chats}}
       {{> chat-item}}
